@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+   <head>
+	<title>cw2Psyes8</title>
+        <LINK REL='stylesheet' TYPE='text/css' HREF='styles.css'>
+
+	 <!--Link to the JS script for validation, etc-->
+	 <script src="cw2.js"></script>
+
+       	<meta name="author" content="Emily Spicer-Jones">
+	 <!--Keywords pertaining to page content added to speed up search-->
+        <meta name="keywords" content = "Movie, Actor, Film House">
+
+	<!--Adding from styling, please note I took direction from w3Schools here -->
+	<!--https://www.w3schools.com/css/css_form.asp-->
+	<style>
+	input[type=text] {
+  	border: 4px solid red;
+  	border-radius: 4px;
+	}
+	</style>
+       
+   </head>
+   <body>
+	<!--Create page heading, I have overriden css styling for h1 here to make this title stand out-->
+	<h1 style="font-family:verdana;font-size:30px">Freddies Film House Movies and Actors</h1>
+	
+	<!--add images-->
+	<!--I used the following site as reference to learn how to center an image-->
+	<!--https://www.codegrepper.com/code-examples/css/how+to+center+an+image+in+html-->
+	<center>
+	<img src="belowTitle_658_263.jpg" alt="movie tape" class="center" style="width:558px;height:163px;">
+	</center>	
+
+	<!--Functionality forms, all are validated using validation function in linked js file-->
+	<!--Submitting any of these forms with the correct inputs will take you to a new webpage-->
+	
+	<!--Adding an actor to the actor table-->
+	<H2>Insert an actor</H2>
+	<p>Please enter the required data to add an actor: </p>
+    	<FORM style="color:white;" action="adding_actor.php" onSubmit="return validation(this)">
+	<!--above, the JS function 'validation' has been stipulated to be called on form submission-->
+      	Actor name: <INPUT type="text" name="aName">
+	<br><br>
+      	<INPUT type="submit" value="Add Actor!">
+    	</FORM>
+	<!--Only name is needed as input here as sql database sets actor id automatically-->
+
+
+	<!--Adding a movie to the movie table-->
+	<H2>Insert an Movie</H2>
+	<p>Please enter the required data to add an actor: </p>
+    	<FORM style="color:white" action="adding_movie.php" onSubmit="return validation(this)">
+        Actor ID: <INPUT type="text" name="aID"><BR><BR>
+      	Movie name: <INPUT type="text" name="mName"><BR><BR>
+	Movie price: <INPUT type="text" name="mPrice"><BR><BR>
+	Year of release: <INPUT type="text" name="mYear"><BR><BR>
+	Movie Genre: <INPUT type="text" name="mGenre">
+	<br><br>
+      	<INPUT type="submit" value="Add Movie!">
+    	</FORM>
+	<!--mvID is not needed as an input as the sql database will set this automatically-->
+
+	<!--Searching for an actor in the actor table-->
+	<H2>Search for an actor</H2>
+    	<FORM style="color:white" action="search_actor.php" onSubmit="return validation(this)" >
+      	Actor name: <INPUT type="text" name="aName">
+	<br><br>
+      	<INPUT type="submit" value="Search Actor">
+    	</FORM>
+	
+	<!--Searching for a movie in the movie table-->
+	<H2>Search for a movie</H2>
+    	<FORM style="color:white" action="search_movie.php" onSubmit="return validation(this)" >
+      	Movie name: <INPUT type="text" name="mName">
+	<br><br>
+	<INPUT type="submit" value="Search Movie">
+    	</FORM>
+	
+	<!-- deleting actor -->
+	<H2>Remove an Actor</H2>
+    	<FORM style="color:white" action="deleting_actor.php" onSubmit="return validation(this)" >
+      	Actor name: <INPUT type="text" name="aName">
+	<br><br>
+      	<INPUT type="submit" value="Delete Actor!">
+    	</FORM>
+
+	<H2>Remove a Movie</H2>
+    	<FORM style="color:white" action="deleting_movie.php" onSubmit="return validation(this)" >
+      	Movie name: <INPUT type="text" name="mName">
+	<br><br>
+      	<INPUT type="submit" value="Delete Movie!">
+    	</FORM>
+</body>
+</html>

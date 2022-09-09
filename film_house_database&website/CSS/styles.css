@@ -1,0 +1,23 @@
+/*Basic styling of all web page - all text should be centered in every webpage*/
+body{
+	/*Main webpage should have a black background*/
+	background-color: black;
+	text-align:center;
+}
+h1{
+	text-align:center;
+	color: white;
+}
+h2{
+	text-align:center;
+	color: white;
+}
+h3{
+	text-align:center;
+	color: white;
+}
+p {
+	text-align:center;
+	/*Unlike title text, sentences will appear in red*/
+	color: red;
+}
