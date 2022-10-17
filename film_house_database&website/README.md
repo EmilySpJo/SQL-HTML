@@ -11,7 +11,7 @@
 <p>I chose to create two separate tables, one for movies and one for actors to make flow of any changes simpler - an actor could be the lead in multiple movies whereas each movie only has one lead. If the actor details changed for example, being able to update the actors table and this thus update all instances in the films table makes maintenance of the overall database much easier then trying to update individual film records.</p>
 
 #### ER diagram:
-![ER diagram](./er_diagram.png)
+![ER diagram](./SQL/er_diagram.png)
 
 #### Actor table:
 ##### Creation of Actor table:
